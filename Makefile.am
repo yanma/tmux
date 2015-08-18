@@ -11,6 +11,7 @@ EXTRA_DIST = \
 dist-hook:
 	make clean
 	grep "^#found_debug=" configure
+ACLOCAL_AMFLAGS = -I/usr/local/share/aclocal/
 
 # Preprocessor flags.
 CPPFLAGS += @XOPEN_DEFINES@ -DTMUX_CONF="\"$(sysconfdir)/tmux.conf\""

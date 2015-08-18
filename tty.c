@@ -54,7 +54,7 @@ void	tty_cell(struct tty *, const struct grid_cell *,
 void	tty_default_colours(struct grid_cell *, const struct window_pane *);
 
 #define tty_use_acs(tty) \
-	(tty_term_has((tty)->term, TTYC_ACSC) && !((tty)->flags & TTY_UTF8))
+	(tty_term_has((tty)->term, TTYC_ACSC))
 
 #define tty_pane_full_width(tty, ctx) \
 	((ctx)->xoff == 0 && screen_size_x((ctx)->wp->screen) >= (tty)->sx)
